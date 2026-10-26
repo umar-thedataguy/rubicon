@@ -59,6 +59,8 @@ def profile_node(state):
 
 
 def clean_node(state):
+    if os.path.exists(state["clean_csv"]):   # never reuse a stale file from an earlier run
+        os.remove(state["clean_csv"])
     gen = generate_cleaning_script(state["profile"], state["raw_csv"], state["clean_csv"],
                                    state["target"], [])
     res = run_in_sandbox(gen["code"])
@@ -74,6 +76,9 @@ def clean_node(state):
         gen["mode"] = "llm-failed-fallback"
     if not res["success"]:
         raise RuntimeError(f"cleaning failed: {res['stderr']}")
+    cols = list(pd.read_csv(state["clean_csv"], nrows=0).columns)
+    if state["target"] not in cols:
+        raise ValueError(f"target column {state['target']!r} not found; columns are {cols}")
     state["llm"] = {"mode": gen["mode"], "provider": gen["provider"], "model": gen["model"],
                     "usage": gen["usage"]}
     _log(state, f"[cleaner] mode={gen['mode']} provider={gen['provider']} "
@@ -124,6 +129,10 @@ def repair_node(state):
 
 
 def tournament_node(state):
+    unresolved = [r["probe"] for r in state.get("probe_results", []) if r["flagged"]]
+    if unresolved:
+        _log(state, f"[supervisor] max rounds reached with {unresolved} still flagged; "
+                    "scores below may still be inflated")
     df = pd.read_csv(state["clean_csv"])
     state["tournament"] = run_tournament(df, state["target"], state["plan"],
                                          n_trials=state.get("n_trials", 20), run_name="repaired")

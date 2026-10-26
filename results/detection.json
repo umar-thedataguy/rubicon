@@ -16,7 +16,7 @@
         "round1_scores": {
           "proxy_feature": 0.643,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.006
         }
@@ -29,7 +29,7 @@
         "round1_scores": {
           "proxy_feature": 0.629,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.007
         }
@@ -42,7 +42,7 @@
         "round1_scores": {
           "proxy_feature": 0.647,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.007,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.006
         }
@@ -55,7 +55,7 @@
         "round1_scores": {
           "proxy_feature": 0.634,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.001,
           "group_leakage": 0.0,
           "temporal_drift": 0.04
         }
@@ -68,7 +68,7 @@
         "round1_scores": {
           "proxy_feature": 0.651,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.008,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.025
         }
@@ -81,7 +81,7 @@
         "round1_scores": {
           "proxy_feature": 0.638,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.008,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.037
         }
@@ -94,7 +94,7 @@
         "round1_scores": {
           "proxy_feature": 0.617,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.005,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.008
         }
@@ -107,7 +107,7 @@
         "round1_scores": {
           "proxy_feature": 0.627,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.012,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.014
         }
@@ -120,7 +120,7 @@
         "round1_scores": {
           "proxy_feature": 0.646,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.013,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.006
         }
@@ -133,7 +133,7 @@
         "round1_scores": {
           "proxy_feature": 0.653,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.011,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.03
         }
@@ -161,7 +161,7 @@
         "round1_scores": {
           "proxy_feature": 0.974,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.015,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.005
         }
@@ -176,7 +176,7 @@
         "round1_scores": {
           "proxy_feature": 0.962,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.002
         }
@@ -191,7 +191,7 @@
         "round1_scores": {
           "proxy_feature": 0.967,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.013
         }
@@ -206,7 +206,7 @@
         "round1_scores": {
           "proxy_feature": 0.975,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.013,
+          "near_duplicates": 0.001,
           "group_leakage": 0.0,
           "temporal_drift": -0.011
         }
@@ -221,7 +221,7 @@
         "round1_scores": {
           "proxy_feature": 0.974,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.007,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.005
         }
@@ -236,7 +236,7 @@
         "round1_scores": {
           "proxy_feature": 0.977,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.005
         }
@@ -251,7 +251,7 @@
         "round1_scores": {
           "proxy_feature": 0.971,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.011,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.005
         }
@@ -266,7 +266,7 @@
         "round1_scores": {
           "proxy_feature": 0.978,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.013,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.002
         }
@@ -281,7 +281,7 @@
         "round1_scores": {
           "proxy_feature": 0.967,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": -0.003
         }
@@ -296,7 +296,7 @@
         "round1_scores": {
           "proxy_feature": 0.97,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.001
         }
@@ -324,7 +324,7 @@
         "round1_scores": {
           "proxy_feature": 0.656,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.0,
           "group_leakage": 0.091,
           "temporal_drift": 0.107
         }
@@ -339,7 +339,7 @@
         "round1_scores": {
           "proxy_feature": 0.613,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.13,
           "temporal_drift": 0.137
         }
@@ -354,7 +354,7 @@
         "round1_scores": {
           "proxy_feature": 0.647,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.007,
+          "near_duplicates": 0.0,
           "group_leakage": 0.148,
           "temporal_drift": 0.141
         }
@@ -369,7 +369,7 @@
         "round1_scores": {
           "proxy_feature": 0.617,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.001,
           "group_leakage": 0.113,
           "temporal_drift": 0.14
         }
@@ -384,7 +384,7 @@
         "round1_scores": {
           "proxy_feature": 0.656,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.008,
+          "near_duplicates": 0.0,
           "group_leakage": 0.113,
           "temporal_drift": 0.075
         }
@@ -399,7 +399,7 @@
         "round1_scores": {
           "proxy_feature": 0.64,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.008,
+          "near_duplicates": 0.0,
           "group_leakage": 0.15,
           "temporal_drift": 0.177
         }
@@ -414,7 +414,7 @@
         "round1_scores": {
           "proxy_feature": 0.643,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.005,
+          "near_duplicates": 0.0,
           "group_leakage": 0.106,
           "temporal_drift": 0.151
         }
@@ -429,7 +429,7 @@
         "round1_scores": {
           "proxy_feature": 0.638,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.012,
+          "near_duplicates": 0.0,
           "group_leakage": 0.127,
           "temporal_drift": 0.155
         }
@@ -444,7 +444,7 @@
         "round1_scores": {
           "proxy_feature": 0.651,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.013,
+          "near_duplicates": 0.0,
           "group_leakage": 0.098,
           "temporal_drift": 0.082
         }
@@ -459,7 +459,7 @@
         "round1_scores": {
           "proxy_feature": 0.661,
           "exact_duplicates": 0.2,
-          "near_duplicates": 0.011,
+          "near_duplicates": 0.0,
           "group_leakage": 0.106,
           "temporal_drift": 0.107
         }
@@ -472,7 +472,7 @@
     "detected": 1.0,
     "exact": 1.0,
     "false_alarm": 0.0,
-    "mean_rounds": 2.3,
+    "mean_rounds": 2.0,
     "diagnosis_counts": {
       "near_duplicates": 10
     },
@@ -482,12 +482,12 @@
         "diagnoses": [
           "near_duplicates"
         ],
-        "rounds": 3,
+        "rounds": 2,
         "final_plan": "stratified",
         "round1_scores": {
           "proxy_feature": 0.656,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.372,
+          "near_duplicates": 0.399,
           "group_leakage": 0.0,
           "temporal_drift": 0.1
         }
@@ -502,7 +502,7 @@
         "round1_scores": {
           "proxy_feature": 0.613,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.37,
+          "near_duplicates": 0.396,
           "group_leakage": 0.0,
           "temporal_drift": 0.131
         }
@@ -517,7 +517,7 @@
         "round1_scores": {
           "proxy_feature": 0.647,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.377,
+          "near_duplicates": 0.399,
           "group_leakage": 0.0,
           "temporal_drift": 0.151
         }
@@ -532,7 +532,7 @@
         "round1_scores": {
           "proxy_feature": 0.617,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.371,
+          "near_duplicates": 0.399,
           "group_leakage": 0.0,
           "temporal_drift": 0.152
         }
@@ -542,12 +542,12 @@
         "diagnoses": [
           "near_duplicates"
         ],
-        "rounds": 3,
+        "rounds": 2,
         "final_plan": "stratified",
         "round1_scores": {
           "proxy_feature": 0.656,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.362,
+          "near_duplicates": 0.398,
           "group_leakage": 0.0,
           "temporal_drift": 0.075
         }
@@ -562,7 +562,7 @@
         "round1_scores": {
           "proxy_feature": 0.64,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.36,
+          "near_duplicates": 0.398,
           "group_leakage": 0.0,
           "temporal_drift": 0.17
         }
@@ -577,7 +577,7 @@
         "round1_scores": {
           "proxy_feature": 0.643,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.369,
+          "near_duplicates": 0.391,
           "group_leakage": 0.0,
           "temporal_drift": 0.14
         }
@@ -592,7 +592,7 @@
         "round1_scores": {
           "proxy_feature": 0.638,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.369,
+          "near_duplicates": 0.399,
           "group_leakage": 0.0,
           "temporal_drift": 0.144
         }
@@ -607,7 +607,7 @@
         "round1_scores": {
           "proxy_feature": 0.651,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.365,
+          "near_duplicates": 0.399,
           "group_leakage": 0.0,
           "temporal_drift": 0.086
         }
@@ -617,12 +617,12 @@
         "diagnoses": [
           "near_duplicates"
         ],
-        "rounds": 3,
+        "rounds": 2,
         "final_plan": "stratified",
         "round1_scores": {
           "proxy_feature": 0.661,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.364,
+          "near_duplicates": 0.396,
           "group_leakage": 0.0,
           "temporal_drift": 0.113
         }
@@ -650,7 +650,7 @@
         "round1_scores": {
           "proxy_feature": 0.65,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.021,
+          "near_duplicates": 0.0,
           "group_leakage": 0.236,
           "temporal_drift": 0.223
         }
@@ -665,7 +665,7 @@
         "round1_scores": {
           "proxy_feature": 0.605,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.026,
+          "near_duplicates": 0.001,
           "group_leakage": 0.26,
           "temporal_drift": 0.261
         }
@@ -680,7 +680,7 @@
         "round1_scores": {
           "proxy_feature": 0.647,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.018,
+          "near_duplicates": 0.0,
           "group_leakage": 0.239,
           "temporal_drift": 0.272
         }
@@ -695,7 +695,7 @@
         "round1_scores": {
           "proxy_feature": 0.634,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.025,
+          "near_duplicates": 0.0,
           "group_leakage": 0.276,
           "temporal_drift": 0.316
         }
@@ -710,7 +710,7 @@
         "round1_scores": {
           "proxy_feature": 0.651,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.021,
+          "near_duplicates": 0.0,
           "group_leakage": 0.249,
           "temporal_drift": 0.236
         }
@@ -725,7 +725,7 @@
         "round1_scores": {
           "proxy_feature": 0.639,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.022,
+          "near_duplicates": 0.0,
           "group_leakage": 0.263,
           "temporal_drift": 0.283
         }
@@ -740,7 +740,7 @@
         "round1_scores": {
           "proxy_feature": 0.643,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.006,
+          "near_duplicates": 0.0,
           "group_leakage": 0.241,
           "temporal_drift": 0.23
         }
@@ -755,7 +755,7 @@
         "round1_scores": {
           "proxy_feature": 0.626,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.021,
+          "near_duplicates": 0.0,
           "group_leakage": 0.291,
           "temporal_drift": 0.271
         }
@@ -770,7 +770,7 @@
         "round1_scores": {
           "proxy_feature": 0.647,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.022,
+          "near_duplicates": 0.0,
           "group_leakage": 0.256,
           "temporal_drift": 0.246
         }
@@ -785,7 +785,7 @@
         "round1_scores": {
           "proxy_feature": 0.653,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.022,
+          "near_duplicates": 0.0,
           "group_leakage": 0.252,
           "temporal_drift": 0.261
         }
@@ -813,7 +813,7 @@
         "round1_scores": {
           "proxy_feature": 0.63,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.184
         }
@@ -828,7 +828,7 @@
         "round1_scores": {
           "proxy_feature": 0.613,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.009,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.157
         }
@@ -843,7 +843,7 @@
         "round1_scores": {
           "proxy_feature": 0.635,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.007,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.145
         }
@@ -858,7 +858,7 @@
         "round1_scores": {
           "proxy_feature": 0.637,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.017,
+          "near_duplicates": 0.001,
           "group_leakage": 0.0,
           "temporal_drift": 0.243
         }
@@ -873,7 +873,7 @@
         "round1_scores": {
           "proxy_feature": 0.661,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.008,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.153
         }
@@ -888,7 +888,7 @@
         "round1_scores": {
           "proxy_feature": 0.642,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.008,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.1
         }
@@ -903,7 +903,7 @@
         "round1_scores": {
           "proxy_feature": 0.612,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.005,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.186
         }
@@ -918,7 +918,7 @@
         "round1_scores": {
           "proxy_feature": 0.625,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.012,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.137
         }
@@ -933,7 +933,7 @@
         "round1_scores": {
           "proxy_feature": 0.647,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.013,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.232
         }
@@ -948,7 +948,7 @@
         "round1_scores": {
           "proxy_feature": 0.648,
           "exact_duplicates": 0.0,
-          "near_duplicates": 0.011,
+          "near_duplicates": 0.0,
           "group_leakage": 0.0,
           "temporal_drift": 0.177
         }
@@ -969,6 +969,6 @@
       8,
       9
     ],
-    "runtime_sec": 244.8
+    "runtime_sec": 217.3
   }
 }

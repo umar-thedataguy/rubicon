@@ -12,7 +12,7 @@
       "model": "openai/gpt-oss-120b",
       "usage": {
         "prompt_tokens": 766,
-        "completion_tokens": 516
+        "completion_tokens": 441
       }
     },
     "diagnoses": [
@@ -40,11 +40,11 @@
           },
           {
             "probe": "near_duplicates",
-            "score": 0.011,
+            "score": 0.0,
             "threshold": 0.05,
             "flagged": false,
             "column": null,
-            "evidence": "1.1% of rows have a near-identical twin"
+            "evidence": "0.0% of rows have a near-identical twin"
           },
           {
             "probe": "group_leakage",
@@ -58,9 +58,9 @@
             "probe": "temporal_drift",
             "threshold": 0.05,
             "column": "signup_month",
-            "score": -0.0,
+            "score": -0.002,
             "flagged": false,
-            "evidence": "AUC 0.979 with random folds vs 0.979 predicting the last 30% of 'signup_month' (gap -0.000)"
+            "evidence": "AUC 0.977 with random folds vs 0.978 predicting the last 30% of 'signup_month' (gap -0.002)"
           }
         ],
         "action": "dropped 'account_closed_flag'"
@@ -86,11 +86,11 @@
           },
           {
             "probe": "near_duplicates",
-            "score": 0.009,
+            "score": 0.0,
             "threshold": 0.05,
             "flagged": false,
             "column": null,
-            "evidence": "0.9% of rows have a near-identical twin"
+            "evidence": "0.0% of rows have a near-identical twin"
           },
           {
             "probe": "group_leakage",
@@ -104,9 +104,9 @@
             "probe": "temporal_drift",
             "threshold": 0.05,
             "column": "signup_month",
-            "score": -0.01,
+            "score": -0.019,
             "flagged": false,
-            "evidence": "AUC 0.734 with random folds vs 0.745 predicting the last 30% of 'signup_month' (gap -0.010)"
+            "evidence": "AUC 0.735 with random folds vs 0.754 predicting the last 30% of 'signup_month' (gap -0.019)"
           }
         ]
       }
@@ -123,108 +123,106 @@
     },
     "leaderboard_before": {
       "Logistic Regression": {
-        "auc": 0.9835,
-        "f1": 0.9428
+        "auc": 0.9834,
+        "f1": 0.9421
       },
       "Random Forest": {
-        "auc": 0.9794,
-        "f1": 0.9427
+        "auc": 0.9806,
+        "f1": 0.942
       },
       "Extra Trees": {
-        "auc": 0.9794,
+        "auc": 0.9773,
         "f1": 0.9432
       },
       "SVM (RBF)": {
-        "auc": 0.974,
+        "auc": 0.9772,
         "f1": 0.9428
       },
       "KNN": {
-        "auc": 0.9754,
-        "f1": 0.941
+        "auc": 0.9776,
+        "f1": 0.9407
       },
       "XGBoost": {
-        "auc": 0.9812,
-        "f1": 0.9396
+        "auc": 0.9804,
+        "f1": 0.9404
       },
       "LightGBM": {
-        "auc": 0.9792,
-        "f1": 0.9405
+        "auc": 0.9769,
+        "f1": 0.9411
       }
     },
     "leaderboard_after": {
       "Logistic Regression": {
-        "auc": 0.6933,
-        "f1": 0.1663
+        "auc": 0.7398,
+        "f1": 0.3183
       },
       "Random Forest": {
-        "auc": 0.7317,
-        "f1": 0.314
+        "auc": 0.7482,
+        "f1": 0.3442
       },
       "Extra Trees": {
-        "auc": 0.7324,
-        "f1": 0.3488
+        "auc": 0.7366,
+        "f1": 0.3275
       },
       "SVM (RBF)": {
-        "auc": 0.7105,
-        "f1": 0.2216
+        "auc": 0.7125,
+        "f1": 0.2606
       },
       "KNN": {
-        "auc": 0.707,
-        "f1": 0.2984
+        "auc": 0.7086,
+        "f1": 0.2743
       },
       "XGBoost": {
-        "auc": 0.7443,
-        "f1": 0.351
+        "auc": 0.7447,
+        "f1": 0.3636
       },
       "LightGBM": {
-        "auc": 0.7333,
-        "f1": 0.3924
+        "auc": 0.7378,
+        "f1": 0.4008
       }
     },
     "inflation_auc": {
-      "Logistic Regression": 0.2902,
-      "Random Forest": 0.2477,
-      "Extra Trees": 0.247,
-      "SVM (RBF)": 0.2635,
-      "KNN": 0.2684,
-      "XGBoost": 0.2369,
-      "LightGBM": 0.2459
+      "Logistic Regression": 0.2436,
+      "Random Forest": 0.2324,
+      "Extra Trees": 0.2407,
+      "SVM (RBF)": 0.2647,
+      "KNN": 0.269,
+      "XGBoost": 0.2357,
+      "LightGBM": 0.2391
     },
     "tuned_before": {
       "family": "Logistic Regression",
-      "auc": 0.9838,
+      "auc": 0.9842,
       "params": {
-        "C": 0.05423185466354646
+        "C": 0.0019517224641449498
       },
       "n_trials": 15
     },
     "tuned_after": {
-      "family": "XGBoost",
-      "auc": 0.7538,
+      "family": "Random Forest",
+      "auc": 0.7581,
       "params": {
-        "n_estimators": 158,
-        "max_depth": 4,
-        "learning_rate": 0.01944744814341963,
-        "subsample": 0.9982812394442452,
-        "colsample_bytree": 0.766583085204017
+        "n_estimators": 250,
+        "max_depth": 20,
+        "min_samples_leaf": 15
       },
       "n_trials": 15
     },
     "causal": {
       "n_test": 900,
       "split": "stratified",
-      "qini_gain": 2531.35,
-      "mean_ite_hat": 0.1032,
-      "spearman_vs_truth": 0.215,
-      "qini_normalised": 0.156,
+      "qini_gain": 2702.07,
+      "mean_ite_hat": 0.107,
+      "spearman_vs_truth": 0.23,
+      "qini_normalised": 0.167,
       "budget": {
         "targeted_customers": 225,
         "ltv_per_saved": 200.0,
-        "saved_value_policy": 7254.8,
+        "saved_value_policy": 6679.4,
         "saved_value_random": 3781.5,
         "saved_value_oracle": 12385.1,
-        "lift_vs_random_pct": 91.8,
-        "share_of_oracle_pct": 58.6
+        "lift_vs_random_pct": 76.6,
+        "share_of_oracle_pct": 53.9
       }
     },
     "causal_curves": {
@@ -281,55 +279,55 @@
         900
       ],
       "model": [
-        -0.5999999999999996,
-        -3.25,
-        -3.53846153846154,
-        -2.75,
-        0.25,
-        2.719999999999999,
-        2.8999999999999986,
-        7.432835820895519,
-        7.0,
-        8.409090909090907,
-        11.0,
-        14.10619469026549,
-        15.826446280991732,
-        14.545454545454547,
-        14.064748201438846,
-        15.13513513513513,
-        17.84615384615384,
-        17.714285714285708,
-        20.88764044943821,
-        19.909090909090907,
-        20.85714285714286,
-        23.304347826086953,
-        25.120930232558138,
-        23.47368421052633,
-        27.369098712446345,
-        28.367346938775512,
-        30.0625,
-        30.471482889733835,
-        31.639705882352928,
-        34.64748201438849,
-        33.42560553633217,
-        35.18181818181819,
-        36.198019801980195,
-        35.269230769230774,
-        37.77602523659306,
-        40.217391304347814,
-        39.0,
+        0.40000000000000036,
+        1.2631578947368425,
+        0.0,
+        -0.6486486486486491,
+        1.0,
+        2.0,
+        1.6774193548387117,
+        3.0,
+        3.0,
+        5.296703296703299,
+        2.6734693877551052,
+        4.5818181818181785,
+        7.741379310344826,
+        8.451612903225808,
+        11.13636363636364,
+        15.255319148936167,
+        15.0,
+        14.854545454545459,
+        16.420454545454547,
+        18.677419354838705,
+        20.575916230366488,
+        25.990099009900987,
+        29.714285714285708,
+        29.054545454545462,
+        31.100436681222703,
+        31.06224066390041,
+        29.90361445783134,
+        34.400000000000006,
+        38.466165413533844,
+        38.86956521739131,
+        37.70383275261324,
+        38.81081081081081,
+        38.198019801980195,
+        37.706070287539944,
+        37.5924764890282,
+        40.20183486238531,
+        41.0,
+        42.41690962099125,
+        41.86685552407931,
+        44.12849162011173,
+        41.235616438356146,
+        43.12765957446811,
+        42.11168831168834,
         40.0,
-        39.14613180515758,
-        39.0,
-        40.235616438356146,
-        42.38709677419354,
-        41.671875,
-        41.664122137404604,
-        40.0,
-        38.35971223021585,
-        35.38028169014086,
-        40.208237986270035,
-        39.88939051918737,
+        37.544554455445564,
+        36.087378640776706,
+        37.092636579572456,
+        41.30344827586208,
+        40.871331828442464,
         42.85840707964604
       ],
       "random": [
@@ -438,25 +436,25 @@
       ]
     },
     "explanation": {
-      "text": "In round\u202f1 the audit flagged the column **`account_closed_flag`** as a proxy leak because its single\u2011feature AUC was 0.971, meaning the model could almost perfectly predict the target using only that field. This \u201ccheats\u201d the evaluation \u2013 the model appears to have very high scores even though it\u2019s just memorising the answer rather than learning real patterns. We fixed it by dropping **`account_closed_flag`**, after which round\u202f2 showed no proxy leak (the next strongest feature, `tenure_months`, has AUC\u202f0.662) and the temporal\u2011drift gap shrank to \u20130.01, indicating realistic performance. All other checks (duplicates, group leakage, etc.) passed, and the final plan uses stratified CV with the leaked column removed and no rows excluded.",
+      "text": "In the first audit the tool flagged a **proxy\u2011feature leak**: the column\u202f`account_closed_flag` alone gave an AUC of\u202f0.971, meaning the model could almost perfectly predict the target from that single field. Because the feature directly mirrors the outcome, it makes cross\u2011validation scores look unrealistically high even though the model would not generalize to new data. We fixed this by **dropping the leaking column** and reran the checks (round\u202f2), after which the best single\u2011feature AUC fell to\u202f0.662 and all other leakage metrics stayed at\u202f0.0. The final evaluation will use stratified CV without `account_closed_flag`, with no rows removed, and the leakage issue is now resolved.",
       "mode": "llm",
       "usage": {
         "prompt_tokens": 435,
-        "completion_tokens": 397
+        "completion_tokens": 378
       }
     },
     "logs": [
       "[profiler] schema profile built: 3000 rows, 13 columns, ~328 tokens",
-      "[cleaner] mode=llm provider=groq tokens={'prompt_tokens': 766, 'completion_tokens': 516} sandbox -> (3000, 13)",
-      "[baseline] naive tournament (before any audit): Logistic Regression 0.984, Random Forest 0.979, Extra Trees 0.979, SVM (RBF) 0.974, KNN 0.975, XGBoost 0.981, LightGBM 0.979",
+      "[cleaner] mode=llm provider=groq tokens={'prompt_tokens': 766, 'completion_tokens': 441} sandbox -> Cleaned data shape: (3000, 13)",
+      "[baseline] naive tournament (before any audit): Logistic Regression 0.983, Random Forest 0.981, Extra Trees 0.977, SVM (RBF) 0.977, KNN 0.978, XGBoost 0.980, LightGBM 0.977",
       "[supervisor] round 1: flagged ['proxy_feature'] \u2014 single-feature AUC of 'account_closed_flag' = 0.971",
       "[repair] dropped 'account_closed_flag'",
       "[supervisor] round 2: all probes clear",
-      "[tournament] plan=stratified: Logistic Regression 0.693, Random Forest 0.732, Extra Trees 0.732, SVM (RBF) 0.711, KNN 0.707, XGBoost 0.744, LightGBM 0.733 | tuned XGBoost 0.754",
-      "[causal] held-out Qini gain 2531.35, normalised 0.156, budget lift vs random 91.8%",
-      "[explain] (llm) In round\u202f1 the audit flagged the column **`account_closed_flag`** as a proxy leak because its single\u2011feature AUC was 0.971, meaning the model could almost perfectly predict the target using only that field. This \u201ccheats\u201d the evaluation \u2013 the model appears to have very high scores even though it\u2019s just memorising the answer rather than learning real patterns. We fixed it by dropping **`account_closed_flag`**, after which round\u202f2 showed no proxy leak (the next strongest feature, `tenure_months`, has AUC\u202f0.662) and the temporal\u2011drift gap shrank to \u20130.01, indicating realistic performance. All other checks (duplicates, group leakage, etc.) passed, and the final plan uses stratified CV with the leaked column removed and no rows excluded."
+      "[tournament] plan=stratified: Logistic Regression 0.740, Random Forest 0.748, Extra Trees 0.737, SVM (RBF) 0.713, KNN 0.709, XGBoost 0.745, LightGBM 0.738 | tuned Random Forest 0.758",
+      "[causal] held-out Qini gain 2702.07, normalised 0.167, budget lift vs random 76.6%",
+      "[explain] (llm) In the first audit the tool flagged a **proxy\u2011feature leak**: the column\u202f`account_closed_flag` alone gave an AUC of\u202f0.971, meaning the model could almost perfectly predict the target from that single field. Because the feature directly mirrors the outcome, it makes cross\u2011validation scores look unrealistically high even though the model would not generalize to new data. We fixed this by **dropping the leaking column** and reran the checks (round\u202f2), after which the best single\u2011feature AUC fell to\u202f0.662 and all other leakage metrics stayed at\u202f0.0. The final evaluation will use stratified CV without `account_closed_flag`, with no rows removed, and the leakage issue is now resolved."
     ],
-    "runtime_sec": 46.0
+    "runtime_sec": 65.3
   },
   "group_leakage": {
     "planted": {
@@ -471,7 +469,7 @@
       "model": "openai/gpt-oss-120b",
       "usage": {
         "prompt_tokens": 759,
-        "completion_tokens": 491
+        "completion_tokens": 486
       }
     },
     "diagnoses": [
@@ -499,11 +497,11 @@
           },
           {
             "probe": "near_duplicates",
-            "score": 0.023,
+            "score": 0.0,
             "threshold": 0.05,
             "flagged": false,
             "column": null,
-            "evidence": "2.3% of rows have a near-identical twin"
+            "evidence": "0.0% of rows have a near-identical twin"
           },
           {
             "probe": "group_leakage",
@@ -545,11 +543,11 @@
           },
           {
             "probe": "near_duplicates",
-            "score": 0.023,
+            "score": 0.0,
             "threshold": 0.05,
             "flagged": false,
             "column": null,
-            "evidence": "2.3% of rows have a near-identical twin"
+            "evidence": "0.0% of rows have a near-identical twin"
           },
           {
             "probe": "group_leakage",
@@ -895,7 +893,7 @@
       ]
     },
     "explanation": {
-      "text": "The audit flagged two leakage problems: **group leakage**, where the same\u202fcustomer_id\u202fappeared in both training and test folds, and **temporal drift**, where the model was evaluated on data from the same signup period it was trained on. Both let the model \u201ccheat,\u201d inflating the AUC from ~0.69 to ~0.97 because it could essentially memorize a customer or recent time\u2011specific patterns instead of learning generalizable signals. We resolved the group leakage by switching to **group\u2011aware cross\u2011validation**",
+      "text": "In the first audit we discovered group leakage: rows that share the same\u202fcustomer_id\u202fwere split across training and test folds, giving an AUC of\u202f0.974\u202fversus\u202f0.689\u202fwhen the groups were kept separate (gap\u202f0.285). This let the model \u201ccheat\u201d by memorizing customer\u2011specific signals, inflating its score. We corrected it by switching to group\u2011aware cross\u2011validation that holds out whole\u202fcustomer_id\u202fgroups, which removed the leakage flag and eliminated the performance gap. After that fix,",
       "mode": "llm",
       "usage": {
         "prompt_tokens": 491,
@@ -904,14 +902,14 @@
     },
     "logs": [
       "[profiler] schema profile built: 3600 rows, 12 columns, ~324 tokens",
-      "[cleaner] mode=llm provider=groq tokens={'prompt_tokens': 759, 'completion_tokens': 491} sandbox -> (3600, 12)",
+      "[cleaner] mode=llm provider=groq tokens={'prompt_tokens': 759, 'completion_tokens': 486} sandbox -> (3600, 12)",
       "[baseline] naive tournament (before any audit): Logistic Regression 0.742, Random Forest 0.993, Extra Trees 0.998, SVM (RBF) 0.833, KNN 0.775, XGBoost 0.892, LightGBM 0.976",
       "[supervisor] round 1: flagged ['group_leakage', 'temporal_drift'] \u2014 AUC 0.974 with random folds vs 0.689 with 'customer_id' kept out of both folds (gap 0.285)",
       "[repair] switched to group-aware CV on 'customer_id'",
       "[supervisor] round 2: all probes clear",
       "[tournament] plan=group: Logistic Regression 0.732, Random Forest 0.714, Extra Trees 0.706, SVM (RBF) 0.676, KNN 0.629, XGBoost 0.691, LightGBM 0.695 | tuned Logistic Regression 0.732",
       "[causal] held-out Qini gain 7170.44, normalised 0.52, budget lift vs random 75.8%",
-      "[explain] (llm) The audit flagged two leakage problems: **group leakage**, where the same\u202fcustomer_id\u202fappeared in both training and test folds, and **temporal drift**, where the model was evaluated on data from the same signup period it was trained on. Both let the model \u201ccheat,\u201d inflating the AUC from ~0.69 to ~0.97 because it could essentially memorize a customer or recent time\u2011specific patterns instead of learning generalizable signals. We resolved the group leakage by switching to **group\u2011aware cross\u2011validation**"
+      "[explain] (llm) In the first audit we discovered group leakage: rows that share the same\u202fcustomer_id\u202fwere split across training and test folds, giving an AUC of\u202f0.974\u202fversus\u202f0.689\u202fwhen the groups were kept separate (gap\u202f0.285). This let the model \u201ccheat\u201d by memorizing customer\u2011specific signals, inflating its score. We corrected it by switching to group\u2011aware cross\u2011validation that holds out whole\u202fcustomer_id\u202fgroups, which removed the leakage flag and eliminated the performance gap. After that fix,"
     ],
     "runtime_sec": 66.8
   },
@@ -928,7 +926,7 @@
       "model": "openai/gpt-oss-120b",
       "usage": {
         "prompt_tokens": 736,
-        "completion_tokens": 455
+        "completion_tokens": 485
       }
     },
     "diagnoses": [
@@ -956,11 +954,11 @@
           },
           {
             "probe": "near_duplicates",
-            "score": 0.009,
+            "score": 0.0,
             "threshold": 0.05,
             "flagged": false,
             "column": null,
-            "evidence": "0.9% of rows have a near-identical twin"
+            "evidence": "0.0% of rows have a near-identical twin"
           },
           {
             "probe": "group_leakage",
@@ -1002,11 +1000,11 @@
           },
           {
             "probe": "near_duplicates",
-            "score": 0.009,
+            "score": 0.0,
             "threshold": 0.05,
             "flagged": false,
             "column": null,
-            "evidence": "0.9% of rows have a near-identical twin"
+            "evidence": "0.0% of rows have a near-identical twin"
           },
           {
             "probe": "group_leakage",
@@ -1356,24 +1354,24 @@
       ]
     },
     "explanation": {
-      "text": "The audit found a **temporal\u2011drift leak**: when we shuffled the data for cross\u2011validation, the model could \u201csee\u201d future information (the last 30\u202f% of\u202fsignup_month), which boosted the AUC from 0.571 to 0.706. This artificial look\u2011ahead inflates scores because the model is evaluated on data that is not truly unseen. We fixed it by switching to a **forward\u2011chaining (temporal) evaluation** that only trains on earlier signup months and tests on later ones. All other checks (proxy feature, duplicates, group leakage) were clean, so the final evaluation plan now uses temporal CV with no rows removed.",
+      "text": "The audit flagged a **temporal leakage** issue: random cross\u2011validation mixed early and later\u202f\u2018signup_month\u2019 records, giving an inflated AUC of\u202f0.706 versus the true 0.571 for the last\u202f30\u202f% of data (gap\u202f0.134). This leakage lets the model \u201cpeek\u201d at future information during training, making its scores look better than they really are. We resolved it by switching to a **forward\u2011chaining (temporal) evaluation** that only trains on earlier months and tests on later months. All other checks (proxy feature, exact/near duplicates, group leakage) were clean, so the final plan uses temporal CV with no rows removed.",
       "mode": "llm",
       "usage": {
         "prompt_tokens": 449,
-        "completion_tokens": 192
+        "completion_tokens": 338
       }
     },
     "logs": [
       "[profiler] schema profile built: 3000 rows, 12 columns, ~304 tokens",
-      "[cleaner] mode=llm provider=groq tokens={'prompt_tokens': 736, 'completion_tokens': 455} sandbox -> Cleaned data shape: (3000, 12)",
+      "[cleaner] mode=llm provider=groq tokens={'prompt_tokens': 736, 'completion_tokens': 485} sandbox -> Cleaned data shape: (3000, 12)",
       "[baseline] naive tournament (before any audit): Logistic Regression 0.701, Random Forest 0.724, Extra Trees 0.713, SVM (RBF) 0.693, KNN 0.684, XGBoost 0.719, LightGBM 0.707",
       "[supervisor] round 1: flagged ['temporal_drift'] \u2014 AUC 0.706 with random folds vs 0.571 predicting the last 30% of 'signup_month' (gap 0.134)",
       "[repair] switched to forward-chaining evaluation on 'signup_month'",
       "[supervisor] round 2: all probes clear",
       "[tournament] plan=temporal: Logistic Regression 0.629, Random Forest 0.681, Extra Trees 0.671, SVM (RBF) 0.649, KNN 0.666, XGBoost 0.683, LightGBM 0.681 | tuned XGBoost 0.691",
       "[causal] held-out Qini gain 448.66, normalised 0.071, budget lift vs random -2.1%",
-      "[explain] (llm) The audit found a **temporal\u2011drift leak**: when we shuffled the data for cross\u2011validation, the model could \u201csee\u201d future information (the last 30\u202f% of\u202fsignup_month), which boosted the AUC from 0.571 to 0.706. This artificial look\u2011ahead inflates scores because the model is evaluated on data that is not truly unseen. We fixed it by switching to a **forward\u2011chaining (temporal) evaluation** that only trains on earlier signup months and tests on later ones. All other checks (proxy feature, duplicates, group leakage) were clean, so the final evaluation plan now uses temporal CV with no rows removed."
+      "[explain] (llm) The audit flagged a **temporal leakage** issue: random cross\u2011validation mixed early and later\u202f\u2018signup_month\u2019 records, giving an inflated AUC of\u202f0.706 versus the true 0.571 for the last\u202f30\u202f% of data (gap\u202f0.134). This leakage lets the model \u201cpeek\u201d at future information during training, making its scores look better than they really are. We resolved it by switching to a **forward\u2011chaining (temporal) evaluation** that only trains on earlier months and tests on later months. All other checks (proxy feature, exact/near duplicates, group leakage) were clean, so the final plan uses temporal CV with no rows removed."
     ],
-    "runtime_sec": 69.4
+    "runtime_sec": 69.2
   }
 }

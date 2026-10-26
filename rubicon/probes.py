@@ -9,6 +9,8 @@ Probes never train the final models; they use a fast gradient-boosting model
 only to compare evaluation schemes. Thresholds are deliberately simple and are
 reported in the results so they can be criticised.
 """
+import re
+
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier
@@ -21,22 +23,42 @@ SEED = 42
 
 
 def encode(df, target):
-    """Numeric view of a frame: factorise text columns, median-fill gaps."""
+    """Numeric view of a frame: factorise text columns, median-fill gaps.
+
+    The target is normalised to {0, 1}; a non-binary target is an error,
+    because every probe compares binary-classification scores."""
+    if target not in df.columns:
+        raise ValueError(f"target column {target!r} not found; columns are {list(df.columns)}")
     X = df.drop(columns=[target]).copy()
     for c in X.columns:
         if not pd.api.types.is_numeric_dtype(X[c]):
             X[c] = pd.factorize(X[c])[0]
     X = X.fillna(X.median(numeric_only=True))
-    return X, df[target].astype(int)
+    y = df[target]
+    if not pd.api.types.is_numeric_dtype(y):
+        y = pd.Series(pd.factorize(y)[0], index=y.index)
+    values = sorted(y.dropna().unique())
+    if len(values) != 2:
+        raise ValueError(f"target {target!r} must be binary; found {len(values)} distinct values")
+    return X, (y == values[1]).astype(int)
+
+
+def _tokens(name):
+    """'customer_id' -> ['customer','id'];  'signupMonth' -> ['signup','month']."""
+    spaced = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", str(name))
+    return [t for t in re.split(r"[^A-Za-z0-9]+", spaced.lower()) if t]
 
 
 def id_like(df):
-    return [c for c in df.columns if "id" in c.lower().split("_") or c.lower().endswith("id")]
+    """Columns that NAME an entity id (customer_id, orderId, ID) — never 'paid' or 'valid'."""
+    return [c for c in df.columns if "id" in _tokens(c)]
 
 
 def time_like(df):
-    keys = ("month", "date", "time", "year", "week", "day")
-    return [c for c in df.columns if any(k in c.lower() for k in keys)]
+    """Columns that index records in time (signup_month, event_date, timestamp) —
+    not durations or rates like tenure_months or monthly_charges."""
+    keys = {"date", "time", "timestamp", "datetime", "month", "year", "week", "day", "period"}
+    return [c for c in df.columns if keys & set(_tokens(c))]
 
 
 def _fast_model():

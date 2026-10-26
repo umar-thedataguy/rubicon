@@ -50,8 +50,13 @@ if run:
         open(raw, "wb").write(upload.getbuffer())
 
     with st.status("Running LangGraph pipeline…", expanded=True) as status:
-        s = run_pipeline(raw, target, treatment or None, id_col or None, ite,
-                         compare_before_after=compare, n_trials=n_trials)
+        try:
+            s = run_pipeline(raw, target, treatment or None, id_col or None, ite,
+                             compare_before_after=compare, n_trials=n_trials)
+        except (ValueError, RuntimeError) as e:
+            status.update(label="Pipeline stopped", state="error")
+            st.error(str(e))
+            st.stop()
         for line in s["logs"]:
             st.write(line)
         status.update(label="Done", state="complete")
