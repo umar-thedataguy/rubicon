@@ -29,13 +29,16 @@ PROVIDERS = {
 
 
 def _load_dotenv():
-    path = os.path.join(os.getcwd(), ".env")
-    if os.path.exists(path):
-        for line in open(path):
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, v = line.split("=", 1)
-                os.environ.setdefault(k.strip(), v.strip())
+    """Read .env from the repo root or the current directory. Real environment
+    variables always win; quotes around values are tolerated."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for path in (os.path.join(root, ".env"), os.path.join(os.getcwd(), ".env")):
+        if os.path.exists(path):
+            for line in open(path):
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    os.environ.setdefault(k.strip(), v.strip().strip("\"'"))
 
 
 def resolve_provider():

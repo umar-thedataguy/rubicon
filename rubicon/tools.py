@@ -15,7 +15,12 @@ import tempfile
 import pandas as pd
 
 
-def profile(csv_path, target, max_sample_values=3):
+def profile(csv_path, target, max_sample_values=None):
+    """Compact description of a CSV. By default up to 3 example values per column
+    are included (they help the model choose encodings); set the environment
+    variable RUBICON_PROFILE_SAMPLES=0 to send schema only."""
+    if max_sample_values is None:
+        max_sample_values = int(os.getenv("RUBICON_PROFILE_SAMPLES", "3"))
     df = pd.read_csv(csv_path)
     cols = {}
     for c in df.columns:

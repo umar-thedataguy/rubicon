@@ -26,7 +26,7 @@ Rubicon detects and reverses it automatically.
 
 ```mermaid
 flowchart LR
-    A[CSV] --> B[Profiler<br/>schema only, never rows]
+    A[CSV] --> B[Profiler<br/>schema + 3 sample values per column, never full rows]
     B --> C[LLM writes cleaning script<br/>Groq / Gemini, or labelled fallback]
     C --> D[Sandbox<br/>separate process, timeout]
     D --> E[Naive tournament<br/>the score a normal AutoML would report]
@@ -69,8 +69,9 @@ Everything below was produced by the code in this repo on a 2016 MacBook Pro;
 `results/*.json` are the raw outputs. The committed showcase ran in **LLM mode**
 with Groq's `openai/gpt-oss-120b` writing the cleaning scripts (~750 prompt +
 ~470 completion tokens per dataset, as reported by the API) and the audit
-explanations. The schema profile the model sees is ~300 tokens; it never sees
-a row.
+explanations. The schema profile the model sees is ~300 tokens: column names,
+types, missing counts and up to three example values per column, never full
+rows.
 
 ### 1. Can the supervisor name the bug? — 6 cases × 10 seeds
 
@@ -150,8 +151,9 @@ python mcp_server.py               # MCP server on http://127.0.0.1:8000/mcp
 ### LLM mode
 
 Copy `.env.example` to `.env` and add a **Groq** or **Gemini** key. The model
-then writes the pandas cleaning script from the schema profile (it never sees
-rows) and explains the audit in plain English; the response's own `usage`
+then writes the pandas cleaning script from the schema profile (column names,
+types, missing counts and up to three example values per column, never full
+rows; set `RUBICON_PROFILE_SAMPLES=0` to send schema only) and explains the audit in plain English; the response's own `usage`
 field is what gets reported as token count. Without a key every run is
 labelled `mode=fallback` and uses a fixed template. The default model is
 `openai/gpt-oss-120b` on Groq; if your provider retires it, set
@@ -208,6 +210,11 @@ results/          raw JSON from the committed runs + figures
   prompt could be tighter.
 - Probe thresholds are fixed constants, chosen before the benchmark and reported
   so they can be criticised.
+- In LLM mode the schema profile includes up to three example values per
+  column, which for real data can contain personal information. Set
+  `RUBICON_PROFILE_SAMPLES=0` to send schema only, or use fallback mode.
+- The sandbox is a separate OS process with a timeout. It contains crashes and
+  hangs; it is not a security boundary against file or network access.
 
 ## Background
 
