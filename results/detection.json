@@ -1,0 +1,974 @@
+{
+  "clean": {
+    "planted": "clean",
+    "n_seeds": 10,
+    "detected": null,
+    "exact": null,
+    "false_alarm": 0.0,
+    "mean_rounds": 1.0,
+    "diagnosis_counts": {},
+    "runs": [
+      {
+        "seed": 0,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.643,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.006
+        }
+      },
+      {
+        "seed": 1,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.629,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.007
+        }
+      },
+      {
+        "seed": 2,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.647,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.007,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.006
+        }
+      },
+      {
+        "seed": 3,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.634,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.04
+        }
+      },
+      {
+        "seed": 4,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.651,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.008,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.025
+        }
+      },
+      {
+        "seed": 5,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.638,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.008,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.037
+        }
+      },
+      {
+        "seed": 6,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.617,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.005,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.008
+        }
+      },
+      {
+        "seed": 7,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.627,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.012,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.014
+        }
+      },
+      {
+        "seed": 8,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.646,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.013,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.006
+        }
+      },
+      {
+        "seed": 9,
+        "diagnoses": [],
+        "rounds": 1,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.653,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.011,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.03
+        }
+      }
+    ]
+  },
+  "proxy_feature": {
+    "planted": "proxy_feature",
+    "n_seeds": 10,
+    "detected": 1.0,
+    "exact": 1.0,
+    "false_alarm": 0.0,
+    "mean_rounds": 2.0,
+    "diagnosis_counts": {
+      "proxy_feature": 10
+    },
+    "runs": [
+      {
+        "seed": 0,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.974,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.015,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.005
+        }
+      },
+      {
+        "seed": 1,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.962,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.002
+        }
+      },
+      {
+        "seed": 2,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.967,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.013
+        }
+      },
+      {
+        "seed": 3,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.975,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.013,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.011
+        }
+      },
+      {
+        "seed": 4,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.974,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.007,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.005
+        }
+      },
+      {
+        "seed": 5,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.977,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.005
+        }
+      },
+      {
+        "seed": 6,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.971,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.011,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.005
+        }
+      },
+      {
+        "seed": 7,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.978,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.013,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.002
+        }
+      },
+      {
+        "seed": 8,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.967,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.0,
+          "temporal_drift": -0.003
+        }
+      },
+      {
+        "seed": 9,
+        "diagnoses": [
+          "proxy_feature"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.97,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.001
+        }
+      }
+    ]
+  },
+  "exact_duplicates": {
+    "planted": "exact_duplicates",
+    "n_seeds": 10,
+    "detected": 1.0,
+    "exact": 1.0,
+    "false_alarm": 0.0,
+    "mean_rounds": 2.0,
+    "diagnosis_counts": {
+      "exact_duplicates": 10
+    },
+    "runs": [
+      {
+        "seed": 0,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.656,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.091,
+          "temporal_drift": 0.107
+        }
+      },
+      {
+        "seed": 1,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.613,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.13,
+          "temporal_drift": 0.137
+        }
+      },
+      {
+        "seed": 2,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.647,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.007,
+          "group_leakage": 0.148,
+          "temporal_drift": 0.141
+        }
+      },
+      {
+        "seed": 3,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.617,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.113,
+          "temporal_drift": 0.14
+        }
+      },
+      {
+        "seed": 4,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.656,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.008,
+          "group_leakage": 0.113,
+          "temporal_drift": 0.075
+        }
+      },
+      {
+        "seed": 5,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.64,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.008,
+          "group_leakage": 0.15,
+          "temporal_drift": 0.177
+        }
+      },
+      {
+        "seed": 6,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.643,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.005,
+          "group_leakage": 0.106,
+          "temporal_drift": 0.151
+        }
+      },
+      {
+        "seed": 7,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.638,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.012,
+          "group_leakage": 0.127,
+          "temporal_drift": 0.155
+        }
+      },
+      {
+        "seed": 8,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.651,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.013,
+          "group_leakage": 0.098,
+          "temporal_drift": 0.082
+        }
+      },
+      {
+        "seed": 9,
+        "diagnoses": [
+          "exact_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.661,
+          "exact_duplicates": 0.2,
+          "near_duplicates": 0.011,
+          "group_leakage": 0.106,
+          "temporal_drift": 0.107
+        }
+      }
+    ]
+  },
+  "near_duplicates": {
+    "planted": "near_duplicates",
+    "n_seeds": 10,
+    "detected": 1.0,
+    "exact": 1.0,
+    "false_alarm": 0.0,
+    "mean_rounds": 2.3,
+    "diagnosis_counts": {
+      "near_duplicates": 10
+    },
+    "runs": [
+      {
+        "seed": 0,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 3,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.656,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.372,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.1
+        }
+      },
+      {
+        "seed": 1,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.613,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.37,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.131
+        }
+      },
+      {
+        "seed": 2,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.647,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.377,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.151
+        }
+      },
+      {
+        "seed": 3,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.617,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.371,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.152
+        }
+      },
+      {
+        "seed": 4,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 3,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.656,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.362,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.075
+        }
+      },
+      {
+        "seed": 5,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.64,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.36,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.17
+        }
+      },
+      {
+        "seed": 6,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.643,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.369,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.14
+        }
+      },
+      {
+        "seed": 7,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.638,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.369,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.144
+        }
+      },
+      {
+        "seed": 8,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 2,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.651,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.365,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.086
+        }
+      },
+      {
+        "seed": 9,
+        "diagnoses": [
+          "near_duplicates"
+        ],
+        "rounds": 3,
+        "final_plan": "stratified",
+        "round1_scores": {
+          "proxy_feature": 0.661,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.364,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.113
+        }
+      }
+    ]
+  },
+  "group_leakage": {
+    "planted": "group_leakage",
+    "n_seeds": 10,
+    "detected": 1.0,
+    "exact": 1.0,
+    "false_alarm": 0.0,
+    "mean_rounds": 2.0,
+    "diagnosis_counts": {
+      "group_leakage": 10
+    },
+    "runs": [
+      {
+        "seed": 0,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.65,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.021,
+          "group_leakage": 0.236,
+          "temporal_drift": 0.223
+        }
+      },
+      {
+        "seed": 1,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.605,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.026,
+          "group_leakage": 0.26,
+          "temporal_drift": 0.261
+        }
+      },
+      {
+        "seed": 2,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.647,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.018,
+          "group_leakage": 0.239,
+          "temporal_drift": 0.272
+        }
+      },
+      {
+        "seed": 3,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.634,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.025,
+          "group_leakage": 0.276,
+          "temporal_drift": 0.316
+        }
+      },
+      {
+        "seed": 4,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.651,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.021,
+          "group_leakage": 0.249,
+          "temporal_drift": 0.236
+        }
+      },
+      {
+        "seed": 5,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.639,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.022,
+          "group_leakage": 0.263,
+          "temporal_drift": 0.283
+        }
+      },
+      {
+        "seed": 6,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.643,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.006,
+          "group_leakage": 0.241,
+          "temporal_drift": 0.23
+        }
+      },
+      {
+        "seed": 7,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.626,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.021,
+          "group_leakage": 0.291,
+          "temporal_drift": 0.271
+        }
+      },
+      {
+        "seed": 8,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.647,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.022,
+          "group_leakage": 0.256,
+          "temporal_drift": 0.246
+        }
+      },
+      {
+        "seed": 9,
+        "diagnoses": [
+          "group_leakage"
+        ],
+        "rounds": 2,
+        "final_plan": "group",
+        "round1_scores": {
+          "proxy_feature": 0.653,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.022,
+          "group_leakage": 0.252,
+          "temporal_drift": 0.261
+        }
+      }
+    ]
+  },
+  "temporal_drift": {
+    "planted": "temporal_drift",
+    "n_seeds": 10,
+    "detected": 1.0,
+    "exact": 1.0,
+    "false_alarm": 0.0,
+    "mean_rounds": 2.0,
+    "diagnosis_counts": {
+      "temporal_drift": 10
+    },
+    "runs": [
+      {
+        "seed": 0,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.63,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.184
+        }
+      },
+      {
+        "seed": 1,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.613,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.009,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.157
+        }
+      },
+      {
+        "seed": 2,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.635,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.007,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.145
+        }
+      },
+      {
+        "seed": 3,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.637,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.017,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.243
+        }
+      },
+      {
+        "seed": 4,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.661,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.008,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.153
+        }
+      },
+      {
+        "seed": 5,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.642,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.008,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.1
+        }
+      },
+      {
+        "seed": 6,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.612,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.005,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.186
+        }
+      },
+      {
+        "seed": 7,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.625,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.012,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.137
+        }
+      },
+      {
+        "seed": 8,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.647,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.013,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.232
+        }
+      },
+      {
+        "seed": 9,
+        "diagnoses": [
+          "temporal_drift"
+        ],
+        "rounds": 2,
+        "final_plan": "temporal",
+        "round1_scores": {
+          "proxy_feature": 0.648,
+          "exact_duplicates": 0.0,
+          "near_duplicates": 0.011,
+          "group_leakage": 0.0,
+          "temporal_drift": 0.177
+        }
+      }
+    ]
+  },
+  "_meta": {
+    "n_rows": 1500,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "runtime_sec": 244.8
+  }
+}
