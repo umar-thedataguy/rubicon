@@ -33,7 +33,7 @@ with st.sidebar:
         id_col = st.text_input("Id column (optional)", "")
     n_trials = st.slider("Optuna trials", 5, 50, 15)
     compare = st.checkbox("Run naive tournament first (before/after)", True)
-    run = st.button("Run pipeline", type="primary", use_container_width=True)
+    run = st.button("Run pipeline", type="primary", width="stretch")
 
 if run:
     os.makedirs("data", exist_ok=True)
@@ -68,7 +68,7 @@ if run:
     for r in s["rounds"]:
         with st.expander(f"Round {r['round']}" + (f" → {r['action']}" if r.get("action") else " → all clear")):
             st.dataframe(pd.DataFrame(r["probes"])[["probe", "score", "threshold", "flagged", "evidence"]],
-                         use_container_width=True, hide_index=True)
+                         width="stretch", hide_index=True)
 
     st.subheader("Model tournament")
     after = pd.DataFrame(s["tournament"]["leaderboard"]).T.rename(columns={"auc": "AUC after audit", "f1": "F1 after audit"})
@@ -79,7 +79,7 @@ if run:
         st.bar_chart(table[["AUC naive", "AUC after audit"]])
     else:
         table = after
-    st.dataframe(table, use_container_width=True)
+    st.dataframe(table, width="stretch")
     t = s["tournament"]["tuned"]
     st.write(f"Optuna tuned **{t['family']}** → AUC {t['auc']} under *{s['plan']['cv']}* evaluation")
 
@@ -87,7 +87,10 @@ if run:
         st.subheader("Who is worth a discount?")
         c = s["causal"]
         cols = st.columns(3)
-        cols[0].metric("Held-out Qini gain", c["qini_gain"])
+        if c.get("qini_normalised") is not None:
+            cols[0].metric("Normalised Qini (1 = oracle)", c["qini_normalised"])
+        else:
+            cols[0].metric("Held-out Qini gain", c["qini_gain"])
         if "budget" in c:
             cols[1].metric("Budget lift vs random", f"{c['budget']['lift_vs_random_pct']}%")
             cols[2].metric("Share of oracle", f"{c['budget']['share_of_oracle_pct']}%")
