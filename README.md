@@ -140,7 +140,7 @@ reported a healthy lift here too.
 
 ```bash
 pip install -r requirements.txt
-python experiments/run_all.py      # detection benchmark + showcase + figures, ~15 min
+python experiments/run_all.py      # detection benchmark + showcase + figures, ~8 min
 streamlit run app.py               # dashboard: plant a bug, watch it get caught
 python mcp_server.py               # MCP server on http://127.0.0.1:8000/mcp
 ```
