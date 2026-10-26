@@ -39,9 +39,8 @@ def main():
             "causal": {k: v for k, v in s.get("causal", {}).items() if k != "curves"},
             "causal_curves": s.get("causal", {}).get("curves"),
             "explanation": s["explanation"], "logs": s["logs"],
-            "runtime_sec": round(time.time() - t0, 1),
         }
-        print(f"\n=== {case} ({out[case]['runtime_sec']}s)")
+        print(f"\n=== {case} ({time.time() - t0:.1f}s)")
         for line in s["logs"]:
             print("  " + line)
         (ROOT / "results" / "showcase.json").write_text(json.dumps(out, indent=2, default=str))

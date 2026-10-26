@@ -107,7 +107,7 @@ def probe_node(state):
     state["rounds"].append({"round": state["round"], "probes": results})
     flagged = [r["probe"] for r in results if r["flagged"]]
     _log(state, f"[supervisor] round {state['round']}: " +
-         (f"flagged {flagged} — " + results[[r['probe'] for r in results].index(flagged[0])]["evidence"]
+         (f"flagged {flagged} - " + results[[r['probe'] for r in results].index(flagged[0])]["evidence"]
           if flagged else "all probes clear"))
     return state
 

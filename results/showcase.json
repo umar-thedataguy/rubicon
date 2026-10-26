@@ -453,8 +453,7 @@
       "[tournament] plan=stratified: Logistic Regression 0.740, Random Forest 0.748, Extra Trees 0.737, SVM (RBF) 0.713, KNN 0.709, XGBoost 0.745, LightGBM 0.738 | tuned Random Forest 0.758",
       "[causal] held-out Qini gain 2702.07, normalised 0.167, budget lift vs random 76.6%",
       "[explain] (llm) In the first audit the tool flagged a **proxy\u2011feature leak**: the column\u202f`account_closed_flag` alone gave an AUC of\u202f0.971, meaning the model could almost perfectly predict the target from that single field. Because the feature directly mirrors the outcome, it makes cross\u2011validation scores look unrealistically high even though the model would not generalize to new data. We fixed this by **dropping the leaking column** and reran the checks (round\u202f2), after which the best single\u2011feature AUC fell to\u202f0.662 and all other leakage metrics stayed at\u202f0.0. The final evaluation will use stratified CV without `account_closed_flag`, with no rows removed, and the leakage issue is now resolved."
-    ],
-    "runtime_sec": 65.3
+    ]
   },
   "group_leakage": {
     "planted": {
@@ -910,8 +909,7 @@
       "[tournament] plan=group: Logistic Regression 0.732, Random Forest 0.714, Extra Trees 0.706, SVM (RBF) 0.676, KNN 0.629, XGBoost 0.691, LightGBM 0.695 | tuned Logistic Regression 0.732",
       "[causal] held-out Qini gain 7170.44, normalised 0.52, budget lift vs random 75.8%",
       "[explain] (llm) In the first audit we discovered group leakage: rows that share the same\u202fcustomer_id\u202fwere split across training and test folds, giving an AUC of\u202f0.974\u202fversus\u202f0.689\u202fwhen the groups were kept separate (gap\u202f0.285). This let the model \u201ccheat\u201d by memorizing customer\u2011specific signals, inflating its score. We corrected it by switching to group\u2011aware cross\u2011validation that holds out whole\u202fcustomer_id\u202fgroups, which removed the leakage flag and eliminated the performance gap. After that fix,"
-    ],
-    "runtime_sec": 66.8
+    ]
   },
   "temporal_drift": {
     "planted": {
@@ -1371,7 +1369,6 @@
       "[tournament] plan=temporal: Logistic Regression 0.629, Random Forest 0.681, Extra Trees 0.671, SVM (RBF) 0.649, KNN 0.666, XGBoost 0.683, LightGBM 0.681 | tuned XGBoost 0.691",
       "[causal] held-out Qini gain 448.66, normalised 0.071, budget lift vs random -2.1%",
       "[explain] (llm) The audit flagged a **temporal leakage** issue: random cross\u2011validation mixed early and later\u202f\u2018signup_month\u2019 records, giving an inflated AUC of\u202f0.706 versus the true 0.571 for the last\u202f30\u202f% of data (gap\u202f0.134). This leakage lets the model \u201cpeek\u201d at future information during training, making its scores look better than they really are. We resolved it by switching to a **forward\u2011chaining (temporal) evaluation** that only trains on earlier months and tests on later months. All other checks (proxy feature, exact/near duplicates, group leakage) were clean, so the final plan uses temporal CV with no rows removed."
-    ],
-    "runtime_sec": 69.2
+    ]
   }
 }

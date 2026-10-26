@@ -44,7 +44,8 @@ def main():
         }
         print(f"{case:17s} detected={out[case]['detected']} exact={out[case]['exact']} "
               f"false_alarm={out[case]['false_alarm']} rounds={out[case]['mean_rounds']:.1f}")
-    out["_meta"] = {"n_rows": N, "seeds": list(SEEDS), "runtime_sec": round(time.time() - t0, 1)}
+    out["_meta"] = {"n_rows": N, "seeds": list(SEEDS)}
+    print(f"elapsed {time.time() - t0:.1f}s")
     (ROOT / "results" / "detection.json").write_text(json.dumps(out, indent=2))
     print("saved results/detection.json")
 

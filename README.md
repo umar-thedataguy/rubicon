@@ -138,6 +138,8 @@ reported a healthy lift here too.
 
 ## Run it
 
+Python 3.10–3.12 (tested on 3.11 and 3.12).
+
 ```bash
 pip install -r requirements.txt
 python experiments/run_all.py      # detection benchmark + showcase + figures, ~8 min
