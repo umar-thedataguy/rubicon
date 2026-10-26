@@ -36,8 +36,8 @@ def main():
             "leaderboard_before": before, "leaderboard_after": after,
             "inflation_auc": {m: round(before[m]["auc"] - after[m]["auc"], 4) for m in before},
             "tuned_before": s["baseline"]["tuned"], "tuned_after": s["tournament"]["tuned"],
-            "causal": {k: v for k, v in s["causal"].items() if k != "curves"},
-            "causal_curves": s["causal"]["curves"],
+            "causal": {k: v for k, v in s.get("causal", {}).items() if k != "curves"},
+            "causal_curves": s.get("causal", {}).get("curves"),
             "explanation": s["explanation"], "logs": s["logs"],
             "runtime_sec": round(time.time() - t0, 1),
         }

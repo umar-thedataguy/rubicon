@@ -147,8 +147,12 @@ def causal_node(state):
     df = pd.read_csv(state["clean_csv"])
     tr = state.get("treatment")
     if tr and tr in df.columns:
-        state["causal"] = evaluate_uplift(df, state["target"], tr, state.get("ite_table"),
-                                          state.get("id_col"), plan=state["plan"])
+        try:
+            state["causal"] = evaluate_uplift(df, state["target"], tr, state.get("ite_table"),
+                                              state.get("id_col"), plan=state["plan"])
+        except ValueError as e:   # e.g. a treatment arm with a single class, or a non-binary treatment
+            _log(state, f"[causal] skipped: {e}")
+            return state
         c = state["causal"]
         _log(state, f"[causal] held-out Qini gain {c['qini_gain']}" +
              (f", normalised {c.get('qini_normalised')}, budget lift vs random "

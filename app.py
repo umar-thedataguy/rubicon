@@ -42,7 +42,7 @@ if run:
         df, truth, ite = make_case(case, n=1500, seed=0)
         raw = f"data/demo_{case}.csv"
         df.to_csv(raw, index=False)
-        st.info(f"Planted: **{truth['type']}** — correct fix: {truth['fix']}")
+        st.info(f"Planted: **{truth['type']}** — correct fix: {truth['fix'] or 'nothing (control case)'}")
     else:
         if upload is None:
             st.stop()
