@@ -1,4 +1,4 @@
-"""Run everything: detection benchmark, showcase pipeline, figures (~15 min on a laptop)."""
+"""Run everything: detection benchmark, showcase pipeline, figures (~8 min on a laptop)."""
 import pathlib
 import subprocess
 import sys
