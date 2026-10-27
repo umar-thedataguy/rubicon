@@ -153,8 +153,9 @@ python mcp_server.py               # MCP server on http://127.0.0.1:8000/mcp
 Copy `.env.example` to `.env` and add a **Groq** or **Gemini** key. The model
 then writes the pandas cleaning script from the schema profile (column names,
 types, missing counts and up to three example values per column, never full
-rows; set `RUBICON_PROFILE_SAMPLES=0` to send schema only) and explains the audit in plain English; the response's own `usage`
-field is what gets reported as token count. Without a key every run is
+rows; set `RUBICON_PROFILE_SAMPLES=0` to send schema only) and explains the
+audit in plain English; the response's own `usage` field is what gets reported
+as token count. Without a key every run is
 labelled `mode=fallback` and uses a fixed template. The default model is
 `openai/gpt-oss-120b` on Groq; if your provider retires it, set
 `RUBICON_LLM_MODEL` to any current chat model.
@@ -200,7 +201,7 @@ results/          raw JSON from the committed runs + figures
   a weaker treatment effect produced threshold-boundary false alarms from this
   probe alone. A bootstrapped version is the obvious upgrade.
 - The T-learner is a baseline uplift model (gradient boosting per arm) and
-  recovers only part of the achievable uplift (55–59% of the oracle's saved
+  recovers only part of the achievable uplift (54–55% of the oracle's saved
   value where it works). X-learners or causal forests would do better; the
   evaluation harness is the contribution, not the learner.
 - The LLM explanation narrates every probe that fired in round 1. In the group
